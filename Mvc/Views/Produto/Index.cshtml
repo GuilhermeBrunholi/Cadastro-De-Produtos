@@ -1,0 +1,43 @@
+@model IEnumerable<Dominio.Entidades.Produto>
+
+@{
+    ViewData["Title"] = "Todos Produtos";
+}
+
+<h2>Todos Produtos</h2>
+
+<a href="/Produto/Salvar" class="btn">Nova Produto</a>
+
+<div class="row">
+    <div class="col-md-12">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Categoria</th>
+                    <th>Quantidade</th>
+                    <th>Preço</th>
+                    <th>Código</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.Nome </td>
+                        <td>@item.Categoria.Nome</td>
+                        <td>@item.Quantidade</td>
+                        <td>R$: @item.Preco</td>
+                        <td>@item.Codigo</td>
+                        <td>
+                            <a href="/Produto/Editar/@item.Id" class="glyphicon glyphicon-pencil" title="Editar"></a>
+                        </td>
+                        <td>
+                            <a href="/Produto/Deletar/@item.Id" class="glyphicon glyphicon-remove" title="Excluir"></a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,12 @@
+C:\Users\Guilherme\Documents\Udemy\NetCore\Estoque\Dados\bin\Debug\netstandard2.0\Dados.deps.json
+C:\Users\Guilherme\Documents\Udemy\NetCore\Estoque\Dados\bin\Debug\netstandard2.0\Dados.dll
+C:\Users\Guilherme\Documents\Udemy\NetCore\Estoque\Dados\bin\Debug\netstandard2.0\Dados.pdb
+C:\Users\Guilherme\Documents\Udemy\NetCore\Estoque\Dados\obj\Debug\netstandard2.0\Dados.csprojAssemblyReference.cache
+C:\Users\Guilherme\Documents\Udemy\NetCore\Estoque\Dados\obj\Debug\netstandard2.0\Dados.csproj.CoreCompileInputs.cache
+C:\Users\Guilherme\Documents\Udemy\NetCore\Estoque\Dados\obj\Debug\netstandard2.0\Dados.AssemblyInfoInputs.cache
+C:\Users\Guilherme\Documents\Udemy\NetCore\Estoque\Dados\obj\Debug\netstandard2.0\Dados.AssemblyInfo.cs
+C:\Users\Guilherme\Documents\Udemy\NetCore\Estoque\Dados\obj\Debug\netstandard2.0\Dados.dll
+C:\Users\Guilherme\Documents\Udemy\NetCore\Estoque\Dados\obj\Debug\netstandard2.0\Dados.pdb
+C:\Users\Guilherme\Documents\Udemy\NetCore\Estoque\Dados\bin\Debug\netstandard2.0\Dominio.dll
+C:\Users\Guilherme\Documents\Udemy\NetCore\Estoque\Dados\bin\Debug\netstandard2.0\Dominio.pdb
+C:\Users\Guilherme\Documents\Udemy\NetCore\Estoque\Dados\obj\Debug\netstandard2.0\Dados.csproj.CopyComplete
