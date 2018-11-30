@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -17,16 +18,42 @@ namespace Mvc.Controllers
             _contexto = contexto;
         }
 
-        public IActionResult Index()
+        // [HttpGet]
+        // public IActionResult Index(string nome)
+        // {
+        //     if (!nome.Any())
+        //     {
+        //         return RedirectToAction("Index");
+        //     }
+        //     else
+        //     {
+        //         var produto = _contexto.Produtos.Select(p => p.Nome == nome);
+        //         return View(produto.ToList());
+        //     }
+        // }
+        public async Task<IActionResult> Index(string pesquisaNome)
         {
-            var queryDeProduto = _contexto.Produtos
-                .Include(p => p.Categoria)
-                .OrderBy(p => p.Categoria);
-            
-            if (!queryDeProduto.Any())
-                return View(new List<Produto>());
+            var produto = from p in _contexto.Produtos
+                          select p;
 
-            return View(queryDeProduto.ToList());
+            if (!String.IsNullOrEmpty(pesquisaNome))
+            {
+                produto = _contexto.Produtos
+                    .Where(p => p.Nome.Contains(pesquisaNome))
+                    .Include(p => p.Categoria);
+                return View(await produto.ToListAsync());
+            }
+            else
+            {
+                var queryDeProduto = _contexto.Produtos
+                    .Include(p => p.Categoria)
+                    .OrderBy(p => p.Categoria);
+
+                if (!queryDeProduto.Any())
+                    return View(new List<Produto>());
+
+                return View(queryDeProduto.ToList());
+            }
         }
 
         public async Task<IActionResult> Deletar(int id)

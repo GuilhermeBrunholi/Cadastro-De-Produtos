@@ -6,7 +6,20 @@
 
 <h2>Todos Produtos</h2>
 
-<a href="/Produto/Salvar" class="btn">Nova Produto</a>
+<a href="/Produto/Salvar" class="btn">Novo Produto</a>
+
+
+<form asp-action="Index" asp-controller="Produto" method="GET">
+    <p>
+        Title: <input type="text" name="pesquisaNome">
+        <input type="submit" value="Pesquisar" />
+    </p>
+</form>
+
+
+
+
+
 
 <div class="row">
     <div class="col-md-12">
